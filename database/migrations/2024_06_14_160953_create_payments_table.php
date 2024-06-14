@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->float('product_price');
             $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('order_id');
         });
     }
 
