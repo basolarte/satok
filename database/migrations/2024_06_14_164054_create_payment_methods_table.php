@@ -11,15 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('payments', function (Blueprint $table) {
+        Schema::create('payment_methods', function (Blueprint $table) {
             $table->id();
+            $table->string('description');
             $table->timestamps();
-            $table->datetime('date');
-            $table->unsignedBigInteger('user_id');
-            $table->float('product_price');
-            $table->unsignedBigInteger('product_id');
-            $table->unsignedBigInteger('order_id');
-            $table->unsignedInteger('payment_methods_id');
         });
     }
 
@@ -28,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('payments');
+        Schema::dropIfExists('payment_methods');
     }
 };
