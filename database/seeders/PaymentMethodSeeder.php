@@ -22,7 +22,7 @@ class PaymentMethodSeeder extends Seeder
             ];
             \App\Models\PaymentMethod::factory()->create(
                 [
-                    'name' => 'PayPal',]
+                    'description' => 'PayPal',]
             );
     }
 }
