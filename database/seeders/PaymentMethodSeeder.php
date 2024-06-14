@@ -12,6 +12,13 @@ class PaymentMethodSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $descriptions = [
+            'Pix',
+            'Boleto',
+            'Mercado Pago',
+            'Pic Pay',
+            'Cartão de Crédito',
+            'Cartão de Débito'
+            ];
     }
 }
