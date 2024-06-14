@@ -17,9 +17,10 @@ class PaymentMethodSeeder extends Seeder
             'Pix',
             'Boleto',
             'Mercado Pago',
-            'Pic Pay',
+            'PicPay',
             'Cartão de Crédito',
-            'Cartão de Débito'
+            'Cartão de Débito',
+            'PayPal'
             ];
 
             foreach ($descriptions as $description) { \App\Models\PaymentMethod::factory()->create(
