@@ -20,5 +20,9 @@ class PaymentMethodSeeder extends Seeder
             'Cartão de Crédito',
             'Cartão de Débito'
             ];
+            \App\Models\PaymentMethod::factory()->create(
+                [
+                    'name' => 'PayPal',]
+            );
     }
 }
