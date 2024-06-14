@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 
 class PaymentMethodSeeder extends Seeder
 {
+
     /**
      * Run the database seeds.
      */
@@ -20,9 +21,12 @@ class PaymentMethodSeeder extends Seeder
             'Cartão de Crédito',
             'Cartão de Débito'
             ];
-            \App\Models\PaymentMethod::factory()->create(
+
+            foreach ($descriptions as $description) { \App\Models\PaymentMethod::factory()->create(
                 [
-                    'description' => 'PayPal',]
+                    'description' => $description,]
             );
     }
+}
+
 }
